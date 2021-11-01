@@ -24,7 +24,7 @@ export const ProductWrapper = styled.div`
             background-color: rgba(247, 247, 247);
         }
         .card-footer p {
-            color: blue;
+            color: red;
         }
     }
     .img-container {
