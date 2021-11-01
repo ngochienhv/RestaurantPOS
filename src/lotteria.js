@@ -1,5 +1,5 @@
 //img = id
-const foodArray = [
+export const foodArray = [
     {ID:"1", name:"Fish Burger", type:["Burger","Seafood"], price:34000, src:"../img1/1.png"},
     {ID:"2", name:"Burger Mozzarella", type:"Burger", price:60000, src:"../img1/2.jpg"},
     {ID:"3", name:"Burger Double Double", type:"Burger", price:59000, src:"../img1/3.jpg"},
