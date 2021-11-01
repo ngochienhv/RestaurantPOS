@@ -1,4 +1,5 @@
 //img = id
+<<<<<<< Updated upstream
 const foodArray = [
     {ID:"1", name:"Fried Chicken", type:"Fried Chicken", price:36000, src:"../img2/1.png"},
     {ID:"2", name:"Fried Chicken - 3 PCs", type:["Fried Chicken","Set"], price:99000, src:"../img2/2.png"},
@@ -6,6 +7,15 @@ const foodArray = [
     {ID:"4", name:"Fried Chicken Meal - 2 PCs", type:["Fried Chicken", "Set"], price:86000, src:"../img2/4.png"},
     {ID:"5", name:"Chicken Nuggets - 4 PCs", type:["Fried Chicken", "Set"], price:36000, src:"../img2/5.png"},
     {ID:"6", name:"Chicken Nuggets - 9 PCs", type:["Fried Chicken", "Set"], price:69000, src:"../img2/6.png"},
+=======
+export const foodArray = [
+    {ID:"1", name:"Fried Chicken", type:"Fried Chicken", price:36000, src:"https://mcdonalds.vn/uploads/2018/food/ga-ran/1-ga-ran.png"},
+    {ID:"2", name:"Fried Chicken - 3 PCs", type:["Fried Chicken","Set"], price:99000, src:"https://mcdonalds.vn/uploads/2018/food/ga-ran/3-ga-ran.png"},
+    {ID:"3", name:"Fried Chicken - 9 PCs", type:["Fried Chicken","Set"], price:289000, src:"https://mcdonalds.vn/uploads/2018/food/ga-ran/9-ga-ran.png"},
+    {ID:"4", name:"Fried Chicken Meal - 2 PCs", type:["Fried Chicken", "Set"], price:86000, src:"https://mcdonalds.vn/uploads/2018/2-ga-ran.png"},
+    {ID:"5", name:"Chicken Nuggets - 4 PCs", type:["Fried Chicken", "Set"], price:36000, src:"https://mcdonalds.vn/uploads/2018/4nuggets.png"},
+    {ID:"6", name:"Chicken Nuggets - 9 PCs", type:["Fried Chicken", "Set"], price:69000, src:"https://mcdonalds.vn/uploads/2018/food/ga-ran/9pcs-chicken-mcnuggets.png"},
+>>>>>>> Stashed changes
 
     {ID:"7", name:"Burger Bulgogi", type:["Burger", "Beef"], price:79000, src:"../img2/7.png"},
     {ID:"8", name:"Cheeseburger", type:["Burger", "Beef"], price:49000, src:"../img2/8.png"},

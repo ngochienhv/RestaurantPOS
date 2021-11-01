@@ -31,7 +31,7 @@ export const ProductWrapper = styled.div`
         position: relative;
         overflow: hidden;
     }
-    .cart-btn {
+    .add-cart-btn {
         position: absolute;
         bottom: 60px;
         right: 70px;

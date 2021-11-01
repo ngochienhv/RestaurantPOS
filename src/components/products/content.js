@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { productList } from "../../components/products/data";
+import { foodArray } from "../../mcdonalds";
 const Context = React.createContext();
 
 class Provider extends Component {
     state = {
-        products: productList
+        products: foodArray
     };
     render() {
         return (

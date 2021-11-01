@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Title from "../components/title/title";
-import { productList } from "../components/products/data";
+import { foodArray } from "../mcdonalds";
 import { Consumer } from "../components/products/content";
 import Product from "../components/products/product";
 import { PaginationProvider, PaginationContext } from "../components/products/Pagination";
@@ -10,7 +10,7 @@ const { useContext, useEffect } = React;
 
 const Page = () => { 
   const [pagination, setPagination] = useContext(PaginationContext)
-  const numberOfPages = Math.ceil(productList.length / pagination.limit);
+  const numberOfPages = Math.ceil(foodArray.length / pagination.limit);
   
   const navigateToPage = (pageNumber) => {
     setPagination({
@@ -51,15 +51,18 @@ const Page = () => {
 }
 export default class ProductList extends Component {
   state = {
-    products: productList
+    products: foodArray
   };
   render() {
     return (
       <React.Fragment>
         <div className="container-fluid">
-          <Title title="lotteria" />
-            <div className="row">
+          <div className="row">
+            <div className="col-5 col-md-6 col-lg-9">
+              <Title title="mcDonalds" />
+            <button className="btn btn-lg cart-btn" id="cart-btn-1"><i class="fas fa-shopping-cart"></i></button>
             </div>
+          </div>
             <div className="row">
               <PaginationProvider>
                 <Page />
