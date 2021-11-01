@@ -1,3 +1,22 @@
+npm install styled-components
+npm install react-icons
+
+## Bootstrap
+
+### `npm i bootstrap`
+
+## React Router
+
+### `npm install react-router-dom`
+
+## React Select
+
+### `npm i --save react-select`
+
+## React-bootstrap
+
+### `npm install react-bootstrap bootstrap@5.1.3`
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +87,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+"# instrumen_shop"
