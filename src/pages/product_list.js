@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Title from "../components/title/title";
-import { productList } from "../components/products/data";
+import { foodArray } from "../mcdonalds";
 import { Consumer } from "../components/products/content";
 import Product from "../components/products/product";
 import { PaginationProvider, PaginationContext } from "../components/products/Pagination";
@@ -10,7 +10,7 @@ const { useContext, useEffect } = React;
 
 const Page = () => { 
   const [pagination, setPagination] = useContext(PaginationContext)
-  const numberOfPages = Math.ceil(productList.length / pagination.limit);
+  const numberOfPages = Math.ceil(foodArray.length / pagination.limit);
   
   const navigateToPage = (pageNumber) => {
     setPagination({
@@ -35,8 +35,8 @@ const Page = () => {
                 }}
         </Consumer>
         <div className="row">
-          <div className="col-6 col-md-8 col-lg-9"></div>
-          <div className="col-6 col-md-4 col-lg-3 my-4">
+          <div className="col-4 col-md-8 col-lg-9"></div>
+          <div className="col-8 col-md-4 col-lg-3 my-4">
         {pagination.page > 2 && <button className="btn pagebtn" onClick={() => navigateToPage(1)}>First</button>}
         {pagination.page > 1 && <button className="btn pagebtn" onClick={() => navigateToPage(pagination.page - 1)}>Prev</button>}
         {[...Array(100)].slice(0, numberOfPages).map((x, i) =>
@@ -51,20 +51,23 @@ const Page = () => {
 }
 export default class ProductList extends Component {
   state = {
-    products: productList
+    products: foodArray
   };
   render() {
     return (
       <React.Fragment>
         <div className="container-fluid">
-          <Title title="lotteria" />
-            <div className="row">
+          <div className="row">
+            <div className="col-12 col-md-12 col-lg-12 NavBar" id="NB1">
+              <Title title="mcDonalds" />
+            <button className="btn btn-lg cart-btn" id="cart-btn-1"><i class="fas fa-shopping-cart"></i></button>
             </div>
             <div className="row">
               <PaginationProvider>
                 <Page />
               </PaginationProvider>
           </div>
+              </div>
               </div>
       </React.Fragment>
     )

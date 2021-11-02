@@ -1,5 +1,5 @@
 import React from "react";
-import { foodArray } from "../../lotteria";
+import { foodArray } from "../../mcdonalds";
 
 const { useState, createContext} = React;
 

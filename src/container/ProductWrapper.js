@@ -9,11 +9,11 @@ export const ProductWrapper = styled.div`
         bottom: 0;
     }
     .card-footer p {
-        font-size: 18px;
+        font-size: 20px;
     }
     .card-footer h5 {
         color: red;
-        font-size: 17px; 
+        font-size: 20px; 
     }
     &:hover {
         .card {
@@ -39,6 +39,7 @@ export const ProductWrapper = styled.div`
         background-color: #FF0000;
         border: 1px white solid;
         color: white;
+        border-radius: 10px;
         transform: translate(100%, 100%);
     }
     .card-img-top {

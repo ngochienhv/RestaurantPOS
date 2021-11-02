@@ -1,5 +1,5 @@
 //img = id
-const foodArray = [
+export const foodArray = [
     {ID:"1", name:"Fried Chicken", type:"Fried Chicken", price:36000, src:"https://mcdonalds.vn/uploads/2018/food/ga-ran/1-ga-ran.png"},
     {ID:"2", name:"Fried Chicken - 3 PCs", type:["Fried Chicken","Set"], price:99000, src:"https://mcdonalds.vn/uploads/2018/food/ga-ran/3-ga-ran.png"},
     {ID:"3", name:"Fried Chicken - 9 PCs", type:["Fried Chicken","Set"], price:289000, src:"https://mcdonalds.vn/uploads/2018/food/ga-ran/9-ga-ran.png"},

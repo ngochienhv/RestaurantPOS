@@ -6,11 +6,53 @@
 }
 
 .pagebtn {
-  background-color: white;
-  border: 1px black solid !important;
+  background-color: red !important;
+  border: 1px white solid !important;
+  color: white !important;
 }
 
 .text-title {
   font-family: "Oswald", sans-serif !important;
-  color: #000;
+  color: white;
+}
+
+#cart-btn-1.cart-btn {
+  position: absolute;
+  bottom: 743px;
+  left: 1300px;
+  font-size: 22px !important;
+  background-color: white !important;
+  border: 1px white solid !important;
+  color: #ff0000 !important;
+  border-radius: 10px;
+  transform: translate(100%, 100%);
+}
+
+@media only screen and (min-width: 480px) and (max-width: 769px) {
+  #cart-btn-1.cart-btn {
+    position: absolute;
+    bottom: 743px;
+    left: 350px;
+    font-size: 18px !important;
+  }
+}
+@media only screen and (min-width: 770px) and (max-width: 1024px) {
+  #cart-btn-1.cart-btn {
+    position: absolute;
+    bottom: 743px;
+    left: 600px;
+    font-size: 20px !important;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  #cart-btn-1.cart-btn {
+    position: absolute;
+    bottom: 743px;
+    left: 600px;
+    font-size: 20px !important;
+  }
+}
+
+.NavBar#NB1 {
+  background-color: red;
 }
