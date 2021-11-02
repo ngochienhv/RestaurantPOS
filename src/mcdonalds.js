@@ -24,7 +24,7 @@ export const foodArray = [
     {ID:"19", name:"Sprite", type:"Beverage", price:20000, src:"https://mcdonalds.vn/uploads/2018/food/beverage/Product_thumb_Sprite.png"},
     {ID:"20", name:"Coca-Cola", type:"Beverage", price:20000, src:"https://mcdonalds.vn/uploads/2018/food/beverage/mcd-food-beverages-soft-drinks-coke.png"},
     {ID:"21", name:"Lychee Black Tea", type:"Beverage", price:45000, src:"https://mcdonalds.vn/uploads/2018/lychee.png"},
-    {ID:"22", name:"Fanta", type:"Beverage", price:20000, src:".https://mcdonalds.vn/uploads/2018/food/beverage/hero-pdt-Fanta-201703_0.png"},
+    {ID:"22", name:"Fanta", type:"Beverage", price:20000, src:"https://mcdonalds.vn/uploads/2018/food/beverage/hero-pdt-Fanta-201703_0.png"},
     {ID:"23", name:"Dasani Water", type:"Beverage", price:20000, src:"https://mcdonalds.vn/uploads/2018/food/beverage/dasani_water.png"},
     {ID:"24", name:"Sprite - L", type:"Beverage", price:20000, src:"https://mcdonalds.vn/uploads/2018/food/beverage/Product_thumb_Sprite.png"},
     {ID:"25", name:"Coca-Cola - L", type:"Beverage", price:20000, src:"https://mcdonalds.vn/uploads/2018/food/beverage/mcd-food-beverages-soft-drinks-coke.png"},
@@ -41,7 +41,7 @@ export const foodArray = [
     {ID:"34", name:"French Fries - L", type:"Snacks", price:36000, src:"https://mcdonalds.vn/uploads/2018/food/ga-ran/large_world_famous_fries.png"},
 
     {ID:"35", name:"Combo 1", type:"Combo", price:81000, src:"https://mcdonalds.vn/uploads/2018/food/Combo/com79k.png"},
-    {ID:"36", name:"Combo 2", type:"Combo", price:129000, src:".https://mcdonalds.vn/uploads/2018/food/Combo/combo2A.png"},
+    {ID:"36", name:"Combo 2", type:"Combo", price:129000, src:"https://mcdonalds.vn/uploads/2018/food/Combo/combo2A.png"},
     {ID:"37", name:"Combo 3", type:"Combo", price:169000, src:"https://mcdonalds.vn/uploads/2018/food/Combo/combo2B.png"},
     {ID:"38", name:"Combo 4", type:"Combo", price:179000, src:"https://mcdonalds.vn/uploads/2018/food/Combo/combo2C.png"},
     {ID:"39", name:"Combo 5", type:"Combo", price:269000, src:"https://mcdonalds.vn/uploads/2018/food/Combo/combo3A.png"},

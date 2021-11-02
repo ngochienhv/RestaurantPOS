@@ -16,7 +16,7 @@ export default class Product extends Component {
           </div>
           <div className="card-footer d-flex">
             <div className="row">
-              <div className="col-8 col-md-7 col-lg-12">
+              <div className="col-12 col-md-12 col-lg-12">
                 <Link to="/" className="link">
                   <strong><p className="align-self-left mb-0 my-2">{ID}. {name}</p></strong>
                 </Link>
