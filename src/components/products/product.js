@@ -19,7 +19,7 @@ export default class Product extends Component {
                 <Link to="/" className="link">
                   <strong><p className="align-self-left mb-0 my-2">{ID}. {name}</p></strong>
                 </Link>
-                <strong><h5 className="font-italic mb-0 my-2">{price}</h5></strong>
+                <strong><h5 className="font-italic mb-0 my-2">{price}đ</h5></strong>
                 <button className="btn cart-btn"><i class="fa fa-cart-plus"></i></button>
               </div>
               </div>
