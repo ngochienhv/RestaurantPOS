@@ -5,6 +5,7 @@ import { Consumer } from "../components/products/content";
 import Product from "../components/products/product";
 import { PaginationProvider, PaginationContext } from "../components/products/Pagination";
 import '../ProductStyle/ProductListStyle.css'
+import Cart from "../components/cart/cart";
 
 const { useContext, useEffect } = React;
 
@@ -60,15 +61,22 @@ export default class ProductList extends Component {
           <div className="row">
             <div className="col-12 col-md-12 col-lg-12 NavBar" id="NB1">
               <Title title="mcDonalds" />
-            <button className="btn btn-lg cart-btn" id="cart-btn-1"><i class="fas fa-shopping-cart"></i></button>
+              <button className="btn btn-lg cart-btn" id="cart-btn-1"><i class="fas fa-shopping-cart"></i></button>
             </div>
             <div className="row">
+              <div className="col-12 col-md-6 col-lg-9">
+                <div className="row">
               <PaginationProvider>
                 <Page />
               </PaginationProvider>
+              </div>
+              </div>
+              <div className="col-lg-3 cart">
+                <Cart />
+              </div>
+            </div>
           </div>
-              </div>
-              </div>
+        </div>
       </React.Fragment>
     )
   }

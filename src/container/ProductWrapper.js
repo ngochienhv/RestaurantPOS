@@ -6,7 +6,7 @@ export const ProductWrapper = styled.div`
         background-color: #fffef1;
         border-radius: 20px;
         position: relative;
-        bottom: 0;
+        bottom: 10px;
     }
     .card-footer p {
         font-size: 20px;
