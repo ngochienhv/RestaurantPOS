@@ -29,15 +29,15 @@ const Page = () => {
     return (
       <>
         <Consumer>
-          {value => {
-                  return value.products.slice(pagination.start, pagination.perPage).map(product => {
+          {value => (
+                  value.products.slice(pagination.start, pagination.perPage).map(product => {
                     return <Product key={product.ID} product={product} />
                   })
-                }}
+          )}
         </Consumer>
         <div className="row">
-          <div className="col-4 col-md-8 col-lg-9"></div>
-          <div className="col-8 col-md-4 col-lg-3 my-4">
+          <div className="col-4 col-md-8 col-lg-8"></div>
+          <div className="col-8 col-md-4 col-lg-4 my-4">
         {pagination.page > 2 && <button className="btn pagebtn" onClick={() => navigateToPage(1)}>First</button>}
         {pagination.page > 1 && <button className="btn pagebtn" onClick={() => navigateToPage(pagination.page - 1)}>Prev</button>}
         {[...Array(100)].slice(0, numberOfPages).map((x, i) =>
@@ -51,33 +51,27 @@ const Page = () => {
   )
 }
 export default class ProductList extends Component {
-  state = {
-    products: foodArray
-  };
   render() {
     return (
       <React.Fragment>
         <div className="container-fluid">
           <div className="row">
             <div className="col-12 col-md-12 col-lg-12 NavBar" id="NB1">
-              <Title title="mcDonalds" />
-              <button className="btn btn-lg cart-btn" id="cart-btn-1"><i class="fas fa-shopping-cart"></i></button>
+              <Title title="EFC" />
             </div>
-            <div className="row">
-              <div className="col-12 col-md-6 col-lg-9">
+            <div className="row menu-row">
+              <div className="col-12 col-md-6 col-lg-9 menu-container">
                 <div className="row">
               <PaginationProvider>
                 <Page />
               </PaginationProvider>
               </div>
               </div>
-              <div className="col-lg-3 cart">
-                <Cart />
-              </div>
             </div>
+            <Cart />
           </div>
-        </div>
-      </React.Fragment>
+      </div>
+    </React.Fragment>
     )
   }
 }

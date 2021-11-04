@@ -7,25 +7,23 @@ export default class CartItem extends React.Component {
         return (
             <Consumer>
                 {value => (
-                    <div>
-                    <div className="row">
-                        <div className="col-4 col-md-4 col-lg-4">
+                    <CartItemWrapper>
+                    <div className="row cart-item-container my-3 mx-auto">
+                        <div className="col-4 col-md-4 col-lg-4 cart-item-img-container">
                             <img src={src} alt="products" className="card-img-top" id={ID} />
                         </div>
-                        <div className="col-4 col-md-4 col-lg-4">
-                            <p>{ID}. {name}</p>
-                            <div className="d-flex flex-row justify-content-center">
-                                    <button className="btn btn-primary btn-sm" onClick={() => value.decrease(ID)}>-</button>
+                        <div className="col-8 col-md-8 col-lg-8 cart-item-content">
+                                <p>{name}</p>
+                                <p className="cart-item-price">Price: {price} VND</p>
+                            <div className="d-flex flex-row justify-content-center cart-item-btns-container">
+                                    <button className="btn btn-primary btn-sm mx-2 cart-item-btn" onClick={() => value.decrease(ID)}>-</button>
                                     <p>{count}</p>
-                                    <button className="btn btn-primary btn-sm" onClick={() => value.increase(ID)}>+</button>
-                                    <button className="btn btn-primary btn-sm" onClick={() => value.remove(ID)}>Remove</button>
+                                    <button className="btn btn-primary btn-sm mx-2 cart-item-btn" onClick={() => value.increase(ID)}>+</button>
+                                    <button className="btn btn-primary btn-sm mx-2 cart-item-btn" onClick={() => value.remove(ID)} id="remove"><i class="fa fa-trash" aria-hidden="true" /></button>
                             </div>
                         </div>
-                        <div className="col-4 col-md-4 col-lg-4">
-                            <p>{price}đ</p>
-                        </div>
                     </div>
-                </div>
+                </CartItemWrapper>
                 )}
             </Consumer>
         )

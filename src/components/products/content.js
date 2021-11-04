@@ -5,7 +5,7 @@ const Context = React.createContext();
 
 class Provider extends Component {
     state = {
-        products: foodArray,
+        products: [],
         cart: [],
         cartTotal: 0
     };
@@ -105,7 +105,9 @@ class Provider extends Component {
         let tempCart = [...this.state.cart];
         tempCart = tempCart.filter(item => item.ID !== ID);
         const index = tempProds.indexOf(this.getItem(ID));
-        let delProd = tempProds[index];
+        const delProd = tempProds[index];
+        delProd.count = 0;
+        delProd.total = 0;
         this.setState(
             () => {
                 return {
