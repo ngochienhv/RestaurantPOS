@@ -28,7 +28,7 @@ export const CartContainer = styled.div`
   font-size: 25px;
   color: #f47a00;
   position: relative;
-  left: 180px;
+  left: 155px;
 }
 
 .cart .total-container .p1 {
@@ -41,7 +41,7 @@ export const CartContainer = styled.div`
   color: black;
   border: #d53401 1px solid;
   position: relative;
-  right: -300px;
+  right: -285px;
 }
 
 .cart .total-container .clear-btn:hover {

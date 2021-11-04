@@ -4,6 +4,7 @@ import { ProductWrapper } from "../../container/ProductWrapper";
 import { Consumer } from "./content";
 import Rating from "@mui/material/Rating";
 import Button from "@mui/material/Button";
+import priceWithDots from "./priceWithDots";
 export default class Product extends Component {
   render() {
     const { ID, name, src, price, type } = this.props.product;
@@ -46,7 +47,7 @@ export default class Product extends Component {
           <div className="food-card_bottom-section">
             <div className="d-flex justify-content-between">
               <div className="food-card_price">
-                <span> {price} VND</span>
+                <span> {priceWithDots(price)} VND</span>
               </div>
               <div className="food-card_order-count">
                 <Button

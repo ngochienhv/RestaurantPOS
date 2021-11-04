@@ -2,7 +2,7 @@ import React from "react";
 import { Consumer } from "../products/content";
 import CartItem from "./cartItem";
 import { CartContainer } from "../../container/CartContainer";
-
+import priceWithDots from "../products/priceWithDots";
 export default class Cart extends React.Component {
     render() {
         return (
@@ -23,7 +23,7 @@ export default class Cart extends React.Component {
                                     <div className="total-container">
                                             <div className="d-flex justify-content-between">
                                                 <p className="text-left p1">Total: </p>
-                                                <p className="text-right p2"><strong>{value.cartTotal} VND</strong></p>
+                                                <p className="text-right p2"><strong>{priceWithDots(value.cartTotal)} VND</strong></p>
                                             </div>
                                         <button className="btn btn-primary btn-md clear-btn" onClick={() => value.clearCart()}>Clear</button>
                                     </div>
