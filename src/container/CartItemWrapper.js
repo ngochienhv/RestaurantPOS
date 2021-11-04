@@ -24,7 +24,7 @@ export const CartItemWrapper = styled.div`
 .cart-item-container .cart-item-btns-container {
   position: relative;
   bottom: 50px;
-  left: -50px;
+  left: -40px;
   height: 30px;
 }
 
