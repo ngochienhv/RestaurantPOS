@@ -96,6 +96,9 @@ export const ProductWrapper = styled.div`
   color: white;
   border-radius: 10px;
 }
+.food-card .food-card_content .food-card_bottom-section .food-card_order-count .cart-btn:hover {
+  background-color: #f47a00;
+}
 .food-card
   .food-card_content
   .food-card_bottom-section
