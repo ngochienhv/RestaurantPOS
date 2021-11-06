@@ -367,4 +367,3 @@ export const foodArray = [
         detail:["4 Miếng Gà Giòn", "1 Burger Phô Mai", "1 Burger Phô Mai 2 Tầng" , "2 Khoai Tây Chiên - M", "3 Coca - L"]
     },
 ];
-

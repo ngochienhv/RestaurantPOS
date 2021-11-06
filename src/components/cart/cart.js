@@ -3,7 +3,7 @@ import { Consumer } from "../products/content";
 import CartItem from "./cartItem";
 import { CartContainer } from "../../container/CartContainer";
 import priceWithDots from "../products/priceWithDots";
-import Example from "../modal/example";
+
 export default function Cart() {
         return (
             <CartContainer>
