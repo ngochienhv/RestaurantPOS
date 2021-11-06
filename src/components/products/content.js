@@ -137,6 +137,17 @@ class Provider extends Component {
             }
         );
     };
+
+    calTotal = () => {
+        let total = 0;
+        this.state.cart.map(item => (total += item.total));
+        this.setState(()=> {
+            return {
+                cartTotal: total
+            }
+        })
+    }
+    
     filterItem = async (typex) => {
         await this.setProducts();
         console.log(this.state.products);
