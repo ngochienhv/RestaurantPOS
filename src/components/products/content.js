@@ -152,7 +152,7 @@ class Provider extends Component {
         await this.setProducts();
         console.log(this.state.products);
         const filterProduct = this.state.products.filter((item) => {
-            return item.type.findIndex((element) => element == typex) > -1;
+            return item.type.findIndex((element) => element === typex) > -1;
         });
         this.setState({
             products: filterProduct,
@@ -161,7 +161,6 @@ class Provider extends Component {
   
     openModal = (ID) => {
         const prod = this.getItem(ID);
-        console.log("bruh");
         this.setState(() => {
             return { modalProduct: prod, modalOpen: true };
         })

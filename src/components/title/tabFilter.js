@@ -13,7 +13,7 @@ export default function TabFilter() {
   return (
     <Consumer>
       {(value) => (
-        <Box sx={{ flexGrow: 1, maxWidth: 1100, bgcolor: "background.paper" }}>
+        <Box sx={{ flexGrow: 1, maxWidth: 1150, bgcolor: "background.paper" }}>
           <Tabs
             value={value1}
             onChange={handleChange}
@@ -30,6 +30,7 @@ export default function TabFilter() {
               return (
                 <Tab
                   className="m-3"
+                  id="food-filter"
                   icon={<Avatar alt="test avatar" src={item.src} />}
                   onClick={() => value.filterItem(item.name)}
                   label={item.name}

@@ -37,13 +37,18 @@ body {
 }
 .filterTab {
   margin-top: 70px !important;
-  background-color: #faf7f2;
+  background-color: #fff;
+  height: 80px;
+  position: relative;
+  left: -18px;
 }
 .filterTab .MuiBox-root {
   background-color: #d53401 !important;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: 700 !important;
   font-size: 20px !important;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  z-index: 1;
 }
 .filterTab .MuiBox-root .MuiButtonBase-root:hover {
   background-color: rgb(228, 228, 228);
@@ -53,7 +58,14 @@ body {
   background-color: blanchedalmond;
 }
 .filterTab .MuiBox-root .MuiButtonBase-root {
-  color: #000 !important;
+  color: #d53401 !important;
+  font-weight: 700;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  background-color: #fff;
+}
+.filterTab .MuiBox-root .MuiButtonBase-root#food-filter {
+  width: 120px;
+  height: 110px;
 }
 .filterTab .css-1wlk0hk-MuiAvatar-root {
   width: 65px;
@@ -62,11 +74,12 @@ body {
 .filterTab .MuiBox-root {
   background-color: aquamarine;
 }
+
 .menu-container {
   position: relative;
-  top: 50px;
+  top: 70px;
   overflow-y: scroll;
-  height: 65vh;
+  height: 70vh;
 }
 
 .modal-container {
