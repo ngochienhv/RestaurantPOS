@@ -7,7 +7,9 @@ class Provider extends Component {
     state = {
         products: [],
         cart: [],
-        cartTotal: 0
+        cartTotal: 0,
+        modalOpen: false,
+        modalProduct: foodArray[0]
     };
 
     componentDidMount() {
@@ -140,6 +142,20 @@ class Provider extends Component {
             }
         })
     }
+
+    openModal = (ID) => {
+        const prod = this.getItem(ID);
+        console.log("bruh");
+        this.setState(() => {
+            return { modalProduct: prod, modalOpen: true };
+        })
+    }
+
+    closeModal = (ID) => {
+        this.setState(() => {
+            return { modalOpen: false };
+        })
+    }
     render() {
         return (
             <Context.Provider value={{
@@ -150,7 +166,9 @@ class Provider extends Component {
                 decrease: this.decrease,
                 remove: this.remove,
                 clearCart: this.clearCart,
-                calTotal: this.calTotal
+                calTotal: this.calTotal,
+                openModal: this.openModal,
+                closeModal: this.closeModal
             }}>
                 {this.props.children}
             </Context.Provider>

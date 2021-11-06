@@ -5,6 +5,7 @@ import { Consumer } from "./content";
 import Rating from "@mui/material/Rating";
 import Button from "@mui/material/Button";
 import priceWithDots from "./priceWithDots";
+
 export default class Product extends Component {
   render() {
     const { ID, name, src, price, type } = this.props.product;
@@ -24,7 +25,7 @@ export default class Product extends Component {
         <div className="food-card_content">
           <div className="food-card_title-section overflow-hidden">
             <h4 className="food-card_title">
-              <a href="#!" className="text-dark">
+                        <a href="#!" className="text-dark" onClick={() => { value.openModal(ID); console.log(value.modalProduct.name) }}>
                 <Link to="/"> {name} </Link>
               </a>
             </h4>

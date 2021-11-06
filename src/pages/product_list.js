@@ -6,7 +6,7 @@ import Product from "../components/products/product";
 import { PaginationProvider, PaginationContext } from "../components/products/Pagination";
 import '../ProductStyle/ProductListStyle.css'
 import Cart from "../components/cart/cart";
-
+import { Button, Offcanvas } from "react-bootstrap";
 const { useContext, useEffect } = React;
 
 const Page = () => { 
@@ -50,6 +50,7 @@ const Page = () => {
       </>
   )
 }
+
 export default class ProductList extends Component {
   render() {
     return (
@@ -60,7 +61,7 @@ export default class ProductList extends Component {
               <Title title="EFC" />
             </div>
             <div className="row menu-row">
-              <div className="col-12 col-md-6 col-lg-9 menu-container">
+              <div className="col-12 col-md-12 col-lg-9 menu-container">
                 <div className="row">
               <PaginationProvider>
                 <Page />

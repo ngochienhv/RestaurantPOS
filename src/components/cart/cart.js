@@ -3,11 +3,11 @@ import { Consumer } from "../products/content";
 import CartItem from "./cartItem";
 import { CartContainer } from "../../container/CartContainer";
 import priceWithDots from "../products/priceWithDots";
-export default class Cart extends React.Component {
-    render() {
+import Example from "../modal/example";
+export default function Cart() {
         return (
             <CartContainer>
-            <div className="container cart position-fixed">
+                <div className="container cart">
                 <Consumer>
                     {value => {
                         const { cart } = value;
@@ -33,7 +33,7 @@ export default class Cart extends React.Component {
                         }
                         else {
                             return (
-                                <h3>Your cart is empty</h3>
+                                <h3><i class="fas fa-shopping-cart"></i> Your cart is empty</h3>
                             )
                         }
                     }}
@@ -41,5 +41,4 @@ export default class Cart extends React.Component {
                 </div>
             </CartContainer>
         )
-    }
 }

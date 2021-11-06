@@ -17,7 +17,7 @@ export const CartItemWrapper = styled.div`
 
 .cart-item-container .cart-item-img-container img {
   position: relative;
-  top: 10px;
+  top: 30px;
   width: 100%;
 }
 
