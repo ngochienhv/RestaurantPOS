@@ -14,9 +14,9 @@ import { Button, Offcanvas } from "react-bootstrap";
 
 const { useContext, useEffect } = React;
 
-const Page = () => {
+const Page = ({data}) => {
   const [pagination, setPagination] = useContext(PaginationContext);
-  const numberOfPages = Math.ceil(foodArray.length / pagination.limit);
+  const numberOfPages = Math.ceil(data.length / pagination.limit);
 
   const navigateToPage = (pageNumber) => {
     setPagination({
@@ -104,7 +104,9 @@ export default class ProductList extends Component {
               <div className="col-12 col-md-12 col-lg-9 menu-container">
                 <div className="row">
                   <PaginationProvider>
-                    <Page />
+                    <Consumer>
+                      {value => (<Page data={value.products}/>)}
+                    </Consumer>
                   </PaginationProvider>
                 </div>
               </div>
