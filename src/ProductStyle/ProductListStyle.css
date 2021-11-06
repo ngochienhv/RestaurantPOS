@@ -69,4 +69,114 @@ body {
   height: 70vh;
 }
 
+.modal-container {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-container .modal-content {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 8px;
+  text-decoration: none;
+  color: #d53401;
+  height: 130px;
+  border: none;
+  width: 350px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  padding: 0;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.modal-container .modal-content .modal-price {
+  color: #f47a00;
+  position: relative;
+  top: -30px;
+  padding: 0;
+}
+
+.modal-container .modal-content .modal-type {
+  font-family: "Satisfy", cursive;
+  color: black;
+  position: relative;
+  top: -10px;
+}
+
+.modal-container .modal-img-container {
+  position: relative;
+  display: flex;
+  height: 200px;
+  width: 350px;
+  justify-content: center;
+  background-color: #d53401;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  padding: 0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.modal-container .modal-img-container img {
+  display: block;
+  width: 100%;
+  max-height: 200px;
+  height: auto;
+  width: auto;
+  object-fit: cover;
+  margin: 0 auto;
+  transition: all 1s;
+}
+
+.modal-container .modal-detail {
+  position: relative;
+  top: -12px;
+  font-size: 18px;
+  background-color: #fff;
+  width: 350px;
+  height: 250px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+}
+
+.modal-container .modal-detail p {
+  position: relative;
+  left: 20px;
+}
+
+.modal-container .modal-detail .close-btn {
+  position: relative;
+  top: 120px;
+  left: 10px;
+  background-color: #d53401;
+  font-size: 20px;
+}
+
+.modal-container .modal-detail .close-btn:hover {
+  background-color: #f47a00;
+}
+
+.modal-container .modal-detail .add-cart-btn {
+  position: relative;
+  top: 120px;
+  right: -230px;
+  background-color: #d53401;
+  font-size: 20px;
+}
+
+.modal-container .modal-detail .add-cart-btn:hover {
+  background-color: #f47a00;
+}
+
 /*===========*/

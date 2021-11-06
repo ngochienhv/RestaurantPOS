@@ -2,19 +2,20 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ProductList from "./pages/product_list";
 import { Provider } from "./components/products/content";
+import Modal from "./components/modal/modal";
 import 'bootstrap/dist/css/bootstrap.min.css'
+import React from "react";
 function App() {
   return (
-    <div>
+    <React.Fragment>
       <Provider>
-        <Router>
           <Switch>
             <Route path="/" exact component={ProductList} />
             <Route path="/product_list" exact component={ProductList} />
           </Switch>
-        </Router>
+        <Modal/>
       </Provider>
-    </div>
+    </React.Fragment>
   );
 }
 

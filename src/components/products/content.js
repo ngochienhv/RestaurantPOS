@@ -4,11 +4,13 @@ import { foodArray } from "../../mcdonalds";
 const Context = React.createContext();
 
 class Provider extends Component {
-  state = {
-    products: [],
-    cart: [],
-    cartTotal: 0,
-  };
+    state = {
+        products: [],
+        cart: [],
+        cartTotal: 0,
+        modalOpen: false,
+        modalProduct: foodArray[0]
+    };
 
   componentDidMount() {
     this.setProducts();
@@ -135,16 +137,6 @@ class Provider extends Component {
       }
     );
   };
-
-  calTotal = () => {
-    let total = 0;
-    this.state.cart.map((item) => (total += item.total));
-    this.setState(() => {
-      return {
-        cartTotal: total,
-      };
-    });
-  };
   filterItem = async (typex) => {
     await this.setProducts();
     console.log(this.state.products);
@@ -155,6 +147,20 @@ class Provider extends Component {
       products: filterProduct,
     });
   };
+  
+  openModal = (ID) => {
+        const prod = this.getItem(ID);
+        console.log("bruh");
+        this.setState(() => {
+            return { modalProduct: prod, modalOpen: true };
+        })
+    }
+
+    closeModal = (ID) => {
+        this.setState(() => {
+            return { modalOpen: false };
+        })
+    }
   render() {
     return (
       <Context.Provider
@@ -168,13 +174,14 @@ class Provider extends Component {
           clearCart: this.clearCart,
           calTotal: this.calTotal,
           filterItem: this.filterItem,
+          openModal: this.openModal,
+          closeModal: this.closeModal
         }}
       >
         {this.props.children}
       </Context.Provider>
     );
   }
-}
 
 const Consumer = Context.Consumer;
 

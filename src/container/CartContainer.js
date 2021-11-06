@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const CartContainer = styled.div`
-    .cart {
+  .cart {
   background-color: #dfe1e0 !important;
   height: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 385px !important;
+  width: 395px !important;
   position: absolute;
   z-index: 0;
   top: 72px;
@@ -56,6 +56,7 @@ export const CartContainer = styled.div`
   right: 17px;
   background-color: #d53401 !important;
   font-size: 20px;
+  border: none;
 }
 
 .cart .payment-btn:hover {
@@ -75,4 +76,5 @@ export const CartContainer = styled.div`
   font-size: 30px;
   color: #d53401;
 }
+
 `

@@ -10,6 +10,7 @@ import {
 import "../ProductStyle/ProductListStyle.css";
 import Cart from "../components/cart/cart";
 import TabFilter from "../components/title/tabFilter";
+import { Button, Offcanvas } from "react-bootstrap";
 
 const { useContext, useEffect } = React;
 
@@ -86,6 +87,23 @@ const Page = () => {
     </>
   );
 };
+        </Consumer>
+        <div className="row">
+          <div className="col-4 col-md-8 col-lg-8"></div>
+          <div className="col-8 col-md-4 col-lg-4 my-4">
+        {pagination.page > 2 && <button className="btn pagebtn" onClick={() => navigateToPage(1)}>First</button>}
+        {pagination.page > 1 && <button className="btn pagebtn" onClick={() => navigateToPage(pagination.page - 1)}>Prev</button>}
+        {[...Array(100)].slice(0, numberOfPages).map((x, i) =>
+          <button className="btn pagebtn" onClick={() => navigateToPage(i + 1)}>{i + 1}</button>
+        )}
+        {pagination.page !== numberOfPages && <button className="btn pagebtn" onClick={() => navigateToPage(pagination.page + 1)}>Next</button>}
+            {pagination.page < Math.ceil(numberOfPages / 2 + 1) && <button className="btn pagebtn" onClick={() => navigateToPage(numberOfPages)}>Last</button>}
+          </div>
+          </div>
+      </>
+  )
+}
+
 export default class ProductList extends Component {
   render() {
     return (
@@ -99,7 +117,7 @@ export default class ProductList extends Component {
               <TabFilter />
             </div>
             <div className="row menu-row">
-              <div className="col-12 col-md-6 col-lg-9 menu-container">
+              <div className="col-12 col-md-12 col-lg-9 menu-container">
                 <div className="row">
                   <PaginationProvider>
                     <Page />
