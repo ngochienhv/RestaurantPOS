@@ -66,43 +66,61 @@ class Provider extends Component {
         let tempCart = [...this.state.cart];
         const tempProd = tempCart.find((item) => item.ID === ID);
         const index = tempCart.indexOf(tempProd);
-        const prod = tempCart[index];
-        prod.count = prod.count + 1;
-        prod.total = prod.count * prod.price;
-        this.setState(
-            () => {
-                return {
-                    cart: [...tempCart],
-                };
-            },
-            () => {
-                this.calTotal();
-            }
-        );
+        if (index === -1) {
+            this.setState(
+                () => {
+                    this.addToCart(ID);
+                }
+            )
+        }
+        else {
+            const prod = tempCart[index];
+            prod.count = prod.count + 1;
+            prod.total = prod.count * prod.price;
+            this.setState(
+                () => {
+                    return {
+                        cart: [...tempCart],
+                    };
+                },
+                () => {
+                    this.calTotal();
+                }
+            );
+        }
     };
 
     decrease = (ID) => {
         let tempCart = [...this.state.cart];
         const tempProd = tempCart.find((item) => item.ID === ID);
         const index = tempCart.indexOf(tempProd);
-        const prod = tempCart[index];
-        prod.count = prod.count - 1;
-        if (prod.count === 0) {
-            this.setState(() => {
-                this.remove(ID);
-            });
+        if (index === -1) {
+            this.setState(
+                () => {
+                    this.remove(ID);
+                }
+            )
         }
-        prod.total = prod.count * prod.price;
-        this.setState(
-            () => {
-                return {
-                    cart: [...tempCart],
-                };
-            },
-            () => {
-                this.calTotal();
+        else {
+            const prod = tempCart[index];
+            prod.count = prod.count - 1;
+            if (prod.count === 0) {
+                this.setState(() => {
+                    this.remove(ID);
+                });
             }
-        );
+            prod.total = prod.count * prod.price;
+            this.setState(
+                () => {
+                    return {
+                        cart: [...tempCart],
+                    };
+                },
+                () => {
+                    this.calTotal();
+                }
+            );
+        }
     };
 
     remove = (ID) => {
@@ -141,13 +159,13 @@ class Provider extends Component {
     calTotal = () => {
         let total = 0;
         this.state.cart.map(item => (total += item.total));
-        this.setState(()=> {
+        this.setState(() => {
             return {
                 cartTotal: total
             }
         })
     }
-    
+
     filterItem = async (typex) => {
         await this.setProducts();
         console.log(this.state.products);
@@ -158,7 +176,7 @@ class Provider extends Component {
             products: filterProduct,
         });
     };
-  
+
     openModal = (ID) => {
         const prod = this.getItem(ID);
         this.setState(() => {

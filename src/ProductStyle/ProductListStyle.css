@@ -22,7 +22,6 @@ body {
 }
 
 .text-title {
-  font-family: "Oswald", sans-serif !important;
   color: white;
 }
 
@@ -41,6 +40,7 @@ body {
   height: 80px;
   position: relative;
   left: -18px;
+  max-width: 1135px !important;
 }
 .filterTab .MuiBox-root {
   background-color: #d53401 !important;
@@ -66,6 +66,7 @@ body {
 .filterTab .MuiBox-root .MuiButtonBase-root#food-filter {
   width: 120px;
   height: 110px;
+  border-radius: 10px;
 }
 .filterTab .css-1wlk0hk-MuiAvatar-root {
   width: 65px;
@@ -123,19 +124,18 @@ body {
   color: black;
   position: relative;
   top: -10px;
+  font-weight: 700;
 }
 
 .modal-container .modal-img-container {
   position: relative;
   display: flex;
-  height: 200px;
+  height: 150px;
   width: 350px;
   justify-content: center;
   background-color: #d53401;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   padding: 0;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
@@ -143,7 +143,7 @@ body {
 .modal-container .modal-img-container img {
   display: block;
   width: 100%;
-  max-height: 200px;
+  max-height: 150px;
   height: auto;
   width: auto;
   object-fit: cover;
@@ -157,39 +157,72 @@ body {
   font-size: 18px;
   background-color: #fff;
   width: 350px;
-  height: 250px;
+  height: auto;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 
 .modal-container .modal-detail p {
   position: relative;
   left: 20px;
-}
-
-.modal-container .modal-detail .close-btn {
-  position: absolute;
-  top: 190px;
-  left: 20px;
-  background-color: #d53401;
-  font-size: 20px;
-}
-
-.modal-container .modal-detail .close-btn:hover {
-  background-color: #f47a00;
+  bottom: 15px;
+  font-size: 18px;
 }
 
 .modal-container .modal-detail .add-cart-btn {
-  position: absolute;
-  top: 190px;
-  left: 290px;
+  position: relative;
+  width: 300px;
+  left: 25px;
+  bottom: 10px;
   background-color: #d53401;
   font-size: 20px;
+  border: rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
 }
 
 .modal-container .modal-detail .add-cart-btn:hover {
   background-color: #f47a00;
 }
 
+.modal-container .modal-detail .cart-item-btns-container {
+  position: relative;
+  bottom: 15px;
+  left: -80px;
+}
+
+.modal-container .modal-detail .cart-item-btns-container h5 {
+  color: #d53401;
+}
+
+.modal-container .modal-detail .cart-item-btn {
+  background-color: white;
+  color: black;
+  border: #d53401 1px solid;
+}
+
+.modal-container .modal-detail .cart-item-btn:hover {
+  background-color: #d53401;
+}
+
+.modal-container .modal-title {
+  height: 50px;
+  width: 350px;
+  background-color: #fff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.modal-container .modal-title .close-btn {
+  position: relative;
+  top: -40px;
+  left: 290px;
+  font-size: 20px;
+  border: none;
+}
+
+.modal-container .modal-title h3 {
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
 /*===========*/
